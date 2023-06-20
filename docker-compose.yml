@@ -1,8 +1,10 @@
-version: '3'
+version: "3"
 services:
   mdbook:
-    image: provisional/mdbook_image:latest
-    volumes:
-      - .:/books
+    container_name: mdbook
+    image: dionidev/mdbook:0.4.28
+    user: "1000:1000"
     ports:
-      - 4000:80
+      - 5000:3000
+    volumes:
+      - ./book:/book
