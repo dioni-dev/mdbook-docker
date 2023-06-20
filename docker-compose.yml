@@ -1,0 +1,8 @@
+version: '3'
+services:
+  mdbook:
+    image: provisional/mdbook_image:latest
+    volumes:
+      - .:/books
+    ports:
+      - 4000:80
